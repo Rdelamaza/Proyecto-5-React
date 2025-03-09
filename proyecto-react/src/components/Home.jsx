@@ -7,7 +7,7 @@ const Home = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 flex flex-col items-center justify-center p-4">
         <div className="bg-white rounded-lg shadow-2xl p-8 max-w-md w-full mx-auto text-center">
         <h1 className="text-3xl font-bold text-gray-800 mb-6">
-            Bienvenido a la App del Clima
+            Bienvenido a la ClimApp
         </h1>
         <p className="text-lg text-gray-700 mb-6">
             Selecciona una opción para ver el clima.
