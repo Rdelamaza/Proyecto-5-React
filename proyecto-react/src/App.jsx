@@ -1,14 +1,19 @@
 import React from "react";
-import Weather from "./components/weather";
-import ErrorBoundary from "./components/errorBoundary";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Weather from "./components/Weather";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 const App = () => {
   return (
-    <ErrorBoundary>
-    <div className="App">
-      <Weather />
-    </div>
-    </ErrorBoundary>
+    <Router>
+      <ErrorBoundary>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/weather" element={<Weather />} />
+        </Routes>
+      </ErrorBoundary>
+    </Router>
   );
 };
 
