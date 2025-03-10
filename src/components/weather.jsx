@@ -58,7 +58,7 @@ const Weather = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 flex flex-col items-center justify-center p-4">
       <div className="bg-white rounded-lg shadow-2xl p-8 max-w-4xl w-full mx-auto">
         <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">
-          Weather App - Chile
+          ClimApp - Chile
         </h1>
 
         {/* Botón para volver a la página de inicio */}
@@ -100,39 +100,36 @@ const Weather = () => {
         {weather && dailyForecast && (
           <div className="text-center mb-8">
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-              Weather in {city}
+              Clima en {city}
             </h3>
             <div className="space-y-2">
               <p className="text-lg text-gray-700">
-                Current Temperature:{" "}
+                Temperatura Actual:{" "}
                 <span className="font-bold">{weather.temperature}°C</span>
               </p>
               <p className="text-lg text-gray-700">
-                Max Temperature:{" "}
+                Temperatura Max:{" "}
                 <span className="font-bold">
                   {dailyForecast.temperature_2m_max[0]}°C
                 </span>
               </p>
               <p className="text-lg text-gray-700">
-                Min Temperature:{" "}
+                Temperatura Min:{" "}
                 <span className="font-bold">
                   {dailyForecast.temperature_2m_min[0]}°C
                 </span>
               </p>
               <p className="text-lg text-gray-700">
-                Precipitation:{" "}
+                Precipitaciones:{" "}
                 <span className="font-bold">
                   {dailyForecast.precipitation_sum[0]} mm
                 </span>
               </p>
               <p className="text-lg text-gray-700">
-                Wind Speed:{" "}
+                Velocidad del viento:{" "}
                 <span className="font-bold">{weather.windspeed} km/h</span>
               </p>
-              <p className="text-lg text-gray-700">
-                Conditions:{" "}
-                <span className="font-bold">{weather.weathercode}</span>
-              </p>
+
             </div>
           </div>
         )}
@@ -141,7 +138,7 @@ const Weather = () => {
         {dailyForecast && (
           <div className="mt-8">
             <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
-              Temperature Forecast
+              Pronostico de Temperatura
             </h3>
             <ResponsiveContainer width="100%" height={300}>
               <LineChart
@@ -157,13 +154,13 @@ const Weather = () => {
                   type="monotone"
                   dataKey="maxTemp"
                   stroke="#8884d8"
-                  name="Max Temperature"
+                  name="Temperatura Max"
                 />
                 <Line
                   type="monotone"
                   dataKey="minTemp"
                   stroke="#82ca9d"
-                  name="Min Temperature"
+                  name="Temperatura Min"
                 />
               </LineChart>
             </ResponsiveContainer>
