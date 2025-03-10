@@ -10,13 +10,13 @@ const Home = () => {
             Bienvenido a la ClimApp
         </h1>
         <p className="text-lg text-gray-700 mb-6">
-            Selecciona una opción para ver el clima.
+            
         </p>
         <Link
             to="/weather"
             className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors"
         >
-            Ver Clima
+            Ver Pronostico
         </Link>
         </div>
     </div>
